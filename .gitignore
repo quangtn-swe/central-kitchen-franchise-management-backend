@@ -45,3 +45,5 @@ desktop.ini
 # Nếu bạn để mật khẩu SQL Server trong file này, đừng đẩy nó lên Git
 application-local.properties
 .env
+
+application.properties
