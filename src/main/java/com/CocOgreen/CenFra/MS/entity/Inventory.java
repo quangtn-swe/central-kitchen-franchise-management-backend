@@ -37,7 +37,8 @@ public class Inventory extends BaseEntity {
     @Column
     private LocalDate expDate;
 
-    @Column(columnDefinition = "DATETIME2")
+    @Column
     private LocalDateTime lastUpdated;
+
 }
 
