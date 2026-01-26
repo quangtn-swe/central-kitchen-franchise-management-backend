@@ -6,11 +6,12 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "transfer_order")
+@Table
 @Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class TransferOrder extends BaseEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id")
