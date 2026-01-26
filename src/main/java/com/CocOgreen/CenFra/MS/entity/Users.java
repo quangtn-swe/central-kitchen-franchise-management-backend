@@ -17,8 +17,9 @@ public class Users extends BaseEntity {
     @Column(length = 50, nullable = false, unique = true)
     private String username;
 
-    @Column(columnDefinition = "VARBINARY(512)")
+    @Column(nullable = false)
     private byte[] passwordHash;
+
 
     @Column(length = 100)
     private String fullName;
