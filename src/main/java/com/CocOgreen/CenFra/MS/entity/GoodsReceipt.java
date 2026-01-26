@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "goods_receipt")
+@Table
 @Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor

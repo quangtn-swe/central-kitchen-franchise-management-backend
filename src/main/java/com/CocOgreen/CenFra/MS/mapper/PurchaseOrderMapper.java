@@ -12,13 +12,13 @@ public interface PurchaseOrderMapper extends GenericMapper<PurchaseOrder, Purcha
     @Mapping(source = "supplier.supplierName", target = "supplierName")
     @Mapping(source = "location.locationId", target = "locationId") // Giả sử Location có ID
     // @Mapping(source = "location.locationName", target = "locationName") // Nếu Location Entity có name
-    @Mapping(source = "status.orderStatusId", target = "orderStatusId")
+    @Mapping(source = "status.id", target = "orderStatusId")
     @Mapping(source = "status.code", target = "orderStatusCode")
     PurchaseOrderDTO toDto(PurchaseOrder entity);
 
     // Khi convert ngược về Entity, ta chỉ cần ID để Hibernate tự link (Reference)
     @Mapping(source = "supplierId", target = "supplier.supplierId")
     @Mapping(source = "locationId", target = "location.locationId")
-    @Mapping(source = "orderStatusId", target = "status.orderStatusId")
+    @Mapping(source = "orderStatusId", target = "status.id")
     PurchaseOrder toEntity(PurchaseOrderDTO dto);
 }

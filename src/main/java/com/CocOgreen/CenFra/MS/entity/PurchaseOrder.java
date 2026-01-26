@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "purchase_order")
+@Table
 @Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
