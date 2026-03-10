@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.CocOgreen.CenFra.MS.dto.ExportNoteDto;
@@ -37,17 +39,23 @@ public class ExportNoteService {
         return exportNoteRepositoty.findAll().stream().map(exportNoteMapper::toDto).collect(Collectors.toList());
     }
 
-  public ExportNoteDto findById(Integer id) {
+    public Page<ExportNoteDto> findByExportCode(String exportCode, Pageable pageable) {
+        String searchKeyword = (exportCode != null) ? exportCode.trim() : "";
+        Page<ExportNote> note = exportNoteRepositoty.searchByExportCode(searchKeyword, pageable);
+        return note.map(exportNoteMapper::toDto);
+    }
+
+    public ExportNoteDto findById(Integer id) {
         ExportNote note = exportNoteRepositoty.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("No ExportNote found with id: " + id));
         return exportNoteMapper.toDto(note);
     }
 
     @Transactional
-    public ExportNote updateStatusExportNote(Integer id, ExportStatus status) {
+    public void updateStatusExportNote(Integer id, ExportStatus status) {
         ExportNote exportNote = exportNoteRepositoty.findById(id).get();
         exportNote.setStatus(status);
-        return exportNoteRepositoty.save(exportNote);
+        exportNoteRepositoty.save(exportNote);
     }
 
     @Transactional
