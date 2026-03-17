@@ -70,8 +70,8 @@ public class StoreOrder {
     }
 
     public void markAsReceived() {
-        if (this.status != StoreOrderStatus.AWAITING_DELIVERY) {
-            throw new IllegalStateException("Only AWAITING_DELIVERY order can be marked as DONE");
+        if (this.status != StoreOrderStatus.IN_TRANSIT) {
+            throw new IllegalStateException("Only IN_TRANSIT order can be marked as DONE");
         }
         this.status = StoreOrderStatus.DONE;
     }
