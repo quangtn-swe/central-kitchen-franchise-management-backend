@@ -151,8 +151,10 @@ Hệ thống đã cấu hình sẵn các tài khoản theo từng vai trò:
 ###  Kitchen Staff
 - **Username:** kitchen  
 - **Password:** 123456  
-- **Vai trò:** Nhân viên bếp trung tâm  
-Store Staff (Store 2)
-Username: store2
-Password: 123456
-Vai trò: Nhân viên cửa hàng
+- **Vai trò:** Nhân viên bếp trung tâm
+- ---
+
+###  Store Staff
+- **Username:** store2  
+- **Password:** 123456  
+- **Vai trò:** Nhân viên cửa hàng
