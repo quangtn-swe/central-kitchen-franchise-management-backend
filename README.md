@@ -123,29 +123,35 @@ src/
 ├── config/ # Cấu hình hệ thống
 └── Application.java
 
-🔐 Tài khoản demo
+## 🔐 Tài khoản demo
+
 Hệ thống đã cấu hình sẵn các tài khoản theo từng vai trò:
 
-Admin
-Username: admin
-Password: 123456
-Vai trò: Quản trị hệ thống
+###  Admin
+- **Username:** admin  
+- **Password:** 123456  
+- **Vai trò:** Quản trị hệ thống  
 
-Manager
-Username: manager
-Password: 123456
-Vai trò: Quản lý cửa hàng / vận hành
+---
 
-Coordinator
-Username: coordinator
-Password: 123456
-Vai trò: Điều phối đơn hàng & sản xuất
+###  Manager
+- **Username:** manager  
+- **Password:** 123456  
+- **Vai trò:** Quản lý cửa hàng / vận hành  
 
-Kitchen Staff
-Username: kitchen
-Password: 123456
-Vai trò: Nhân viên bếp trung tâm
+---
 
+###  Coordinator
+- **Username:** coordinator  
+- **Password:** 123456  
+- **Vai trò:** Điều phối đơn hàng & sản xuất  
+
+---
+
+###  Kitchen Staff
+- **Username:** kitchen  
+- **Password:** 123456  
+- **Vai trò:** Nhân viên bếp trung tâm  
 Store Staff (Store 2)
 Username: store2
 Password: 123456
